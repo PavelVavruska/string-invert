@@ -3,6 +3,7 @@ use std::collections::VecDeque;
 /// Inverts each word in given string, while preserving
 /// original word order.
 /// ```
+/// use stringlib::inverse_words;
 /// let str = "Hi, I am Pavel.";
 /// let result = inverse_words(str);
 /// assert_eq!(result, ",iH I ma .levaP");
@@ -22,7 +23,7 @@ pub fn inverse_words(str: &str) -> String {
     result
 }
 
-fn dump_buffer(target: &mut String, word: &mut VecDeque::<char>) {
+fn dump_buffer(target: &mut String, word: &mut VecDeque<char>) {
     word.iter().for_each(|c| {
         target.push(c.clone());
     });
@@ -32,7 +33,7 @@ fn dump_buffer(target: &mut String, word: &mut VecDeque::<char>) {
 #[cfg(test)]
 mod tests {
     use super::inverse_words;
-    
+
     #[test]
     fn test_inverse_str() {
         let str = "Hi, I am Pavel.";

@@ -1,6 +1,6 @@
 use std::io::{stdin, Read};
 
-mod inv;
+pub mod inv;
 
 fn main() {
     let mut buf = String::new();
